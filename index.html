@@ -24,23 +24,20 @@
 
     <script>
 function openGame(url) {
-    var win = window.open();
-    var iframe = win.document.createElement('iframe');
-    iframe.style.width = "100%";
-    iframe.style.height = "100%";
-    iframe.style.border = "none";
-    iframe.src = url;
-    iframe.allowfullscreen
-    win.document.body.appendChild(iframe);
-    win.document.title = "Home | Schoology";
-
-    var link = win.document.createElement('link');
-    link.type = 'image/x-icon';
-    link.rel = 'shortcut icon';
-    link.href = 'https://i0.wp.com/www.mpslakers.com/wp-content/uploads/2020/01/schoology-logo.png?fit=511%2C511&ssl=1';
-    win.document.head.appendChild(link);
-
-  
+  var win = window.open();
+  var iframe = win.document.createElement('iframe');
+  iframe.style.width = "100%";
+  iframe.style.height = "100%";
+  iframe.style.border = "none";
+  iframe.src = url;
+  iframe.setAttribute("allowfullscreen", true); // Added allowfullscreen attribute
+  win.document.body.appendChild(iframe);
+  win.document.title = "Home | Schoology";
+  var link = win.document.createElement('link');
+  link.type = 'image/x-icon';
+  link.rel = 'shortcut icon';
+  link.href = 'https://i0.wp.com/www.mpslakers.com/wp-content/uploads/2020/01/schoology-logo.png?fit=511511&ssl=1';
+  win.document.head.appendChild(link);
 }
 
     </script>
