@@ -18,6 +18,13 @@
             font-family: Arial, sans-serif;
             text-shadow: 2px 2px #000000; /* Text stroke for button text */
         }
+iframe {
+        display: block;
+        background: #000;
+        border: none;
+        height: 100vh;
+        width: 100vw;
+      }
 </style>
 <body>
 <button class="cool-button" onclick="openGame('https://chicken-hf57.vercel.app/')">Cloak Tab</button>
@@ -25,12 +32,7 @@
     <script>
 function openGame(url) {
   var win = window.open();
-  var iframe = win.document.createElement('iframe');
-  iframe.style.width = "100%";
-  iframe.style.height = "100%";
-  iframe.style.border = "none";
-  iframe.src = url;
-  iframe.setAttribute("allowfullscreen", true); // Added allowfullscreen attribute
+     <iframe src="https://quinez.vercel.app/tabs" id="iframeId" style="bottom: 0" style="border: 0px #ffffff none" name="Iframe" scrolling="yes" frameborder="0" marginheight="0px" marginwidth="0px" height="100%" width="100%" allowfullscreen></iframe>
   win.document.body.appendChild(iframe);
   win.document.title = "Home | Schoology";
   var link = win.document.createElement('link');
