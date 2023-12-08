@@ -34,6 +34,8 @@ function openGame(url) {
     iframe.style.height = "100%";
     iframe.style.border = "none";
     iframe.src = url;
+    iframe.style.padding = "0";
+    iframe.style.margin = "0";
     win.document.body.appendChild(iframe);
     win.document.title = "Home | Schoology";
 
