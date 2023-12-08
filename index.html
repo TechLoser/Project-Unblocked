@@ -1,5 +1,3 @@
-Here's the updated code:
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -37,6 +35,8 @@ Here's the updated code:
       iframe.style.height = '100vh';
       iframe.style.width = '100vw';
       iframe.style.display = 'block';
+      iframe.setAttribute('allowfullscreen', 'true'); // Allow full screen
+      iframe.setAttribute('scrolling', 'no'); // Disable scrolling
       win.document.body.appendChild(iframe);
       win.document.title = 'Home | Schoology';
       var link = win.document.createElement('link');
@@ -48,4 +48,3 @@ Here's the updated code:
   </script>
 </body>
 </html>
-These changes should address the issues in the original code. If you have any further questions or need additional assistance, feel free to ask!
