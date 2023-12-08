@@ -1,46 +1,51 @@
-<style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #373E41;
-            text-align: center;
-            margin: 0;
-            padding: 0;
-        }
-.cool-button {
-            background: linear-gradient(to right, #9c0c0c, #f70202);
-            color: #fff;
-            border: none;
-            padding: 15px 30px;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s, transform 0.3s;
-            margin: 10px;
-            font-family: Arial, sans-serif;
-            text-shadow: 2px 2px #000000; /* Text stroke for button text */
-        }
-iframe {
-        display: block;
-        background: #000;
-        border: none;
-        height: 100vh;
-        width: 100vw;
-      }
-</style>
+Here's the updated code:
+
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #373E41;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+    .cool-button {
+      background: linear-gradient(to right, #9c0c0c, #f70202);
+      color: #fff;
+      border: none;
+      padding: 15px 30px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.3s;
+      margin: 10px;
+      font-family: Arial, sans-serif;
+      text-shadow: 2px 2px #000000; /* Text stroke for button text */
+    }
+  </style>
+</head>
 <body>
-<button class="cool-button" onclick="openGame('https://chicken-hf57.vercel.app/')">Cloak Tab</button>
+  <button class="cool-button" onclick="openGame('https://chicken-hf57.vercel.app/')">Cloak Tab</button>
 
-    <script>
-function openGame(url) {
-  var win = window.open();
-     <iframe src="https://quinez.vercel.app/tabs" id="iframeId" style="bottom: 0" style="border: 0px #ffffff none" name="Iframe" scrolling="yes" frameborder="0" marginheight="0px" marginwidth="0px" height="100%" width="100%" allowfullscreen></iframe>
-  win.document.body.appendChild(iframe);
-  win.document.title = "Home | Schoology";
-  var link = win.document.createElement('link');
-  link.type = 'image/x-icon';
-  link.rel = 'shortcut icon';
-  link.href = 'https://i0.wp.com/www.mpslakers.com/wp-content/uploads/2020/01/schoology-logo.png?fit=511511&ssl=1';
-  win.document.head.appendChild(link);
-}
-
-    </script>
+  <script>
+    function openGame(url) {
+      var win = window.open();
+      var iframe = document.createElement('iframe');
+      iframe.src = 'https://quinez.vercel.app/tabs';
+      iframe.style.border = 'none';
+      iframe.style.height = '100vh';
+      iframe.style.width = '100vw';
+      iframe.style.display = 'block';
+      win.document.body.appendChild(iframe);
+      win.document.title = 'Home | Schoology';
+      var link = win.document.createElement('link');
+      link.type = 'image/x-icon';
+      link.rel = 'shortcut icon';
+      link.href = 'https://i0.wp.com/www.mpslakers.com/wp-content/uploads/2020/01/schoology-logo.png?fit=511511&ssl=1';
+      win.document.head.appendChild(link);
+    }
+  </script>
 </body>
+</html>
+These changes should address the issues in the original code. If you have any further questions or need additional assistance, feel free to ask!
