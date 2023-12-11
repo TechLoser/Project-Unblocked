@@ -1,31 +1,106 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #373E41;
-      text-align: center;
-      margin: 0;
-      padding: 0;
-    }
-    .cool-button {
-      background: linear-gradient(to right, #9c0c0c, #f70202);
-      color: #fff;
-      border: none;
-      padding: 15px 30px;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: background-color 0.3s, transform 0.3s;
-      margin: 10px;
-      font-family: Arial, sans-serif;
-      text-shadow: 2px 2px #000000; /* Text stroke for button text */
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="https://i0.wp.com/www.mpslakers.com/wp-content/uploads/2020/01/schoology-logo.png?fit=511%2C511&ssl=1">
+    <title>Home | Schoology</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #373E41;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar {
+            background-color: #1e1e1e;
+            overflow: hidden;
+            animation: fadeIn 2s;
+            text-align: center;
+        }
+
+        .navbar a {
+            display: inline-block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            transition: background-color 0.5s;
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+        }
+
+        .navbar a:hover {
+            background-color: #8B0000;
+        }
+
+        .panic-button,
+        .code-button {
+            float: right; 
+            padding: 14px 16px;
+            text-decoration: none;
+            display: flex;
+            align-items: left;
+            cursor: pointer;
+        }
+        
+        .nav-button {
+            float: left; 
+            padding: 20px 20px;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+        
+        .panic-image,
+        .code-image {
+            width: 20px; 
+            height: 20px;
+            margin-right: 5px;
+        }
+        .text-style-lol {
+            display: inline-block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            transition: background-color 0.5s;
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+    </style>
 </head>
 <body>
-  <button class="cool-button" onclick="openGame('https://chickenhipig.vercel.app/')">Cloak Tab</button>
 
+    
+<div class="navbar">
+    <a class="panic-button" href="https://mybedford.schoology.com">
+        <img class="panic-image" src="https://cdn-icons-png.flaticon.com/512/564/564619.png" alt="Panic Icon">Panic!
+    </a>
+    <a class="code-button" href="https://github.com/DreadzHubYT/Retry">
+        <img class="code-image" src="Assets/scripting.png" alt="Panic Icon">See Website Code
+    </a>
+    <a class="nav-button" href="index.html">Home</a>
+    <a class="nav-button" href="games.html">Games</a>
+    <a class="nav-button" href="apps.html">Apps</a>
+    <a class="nav-button" href="settings.html">Settings</a>
+</div>
+
+<img data-bss-disabled-mobile="true" data-aos="zoom-in" data-aos-duration="550" data-aos-once="true" src="Assets/logo.png" style="center-align: left;margin-bottom: 36px;" width="250" height="95"><strong><h5 id="randomText"></h5></strong><script>
+</body>
+</html>
+  
   <script>
 function openGame(url) {
   var win = window.open();
@@ -45,5 +120,3 @@ function openGame(url) {
   win.document.head.appendChild(link);
 }
   </script>
-</body>
-</html>
