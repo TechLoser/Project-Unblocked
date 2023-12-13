@@ -68,14 +68,4 @@
           document.exitFullscreen();
         }
       });
-      const homeButton = document.getElementById("home-page");
-        homeButton.addEventListener("click", function () {
-        window.location.href = "./";
-      });
-      window.onload = function() {
-        let encodedUrl = sessionStorage.getItem("encodedUrl");
-        encodedUrl = "/reviews/" + encodedUrl;
-        console.log(encodedUrl);
-        document.querySelector("#iframeid").src = encodedUrl;
-      };
   </script>
