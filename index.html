@@ -13,13 +13,14 @@
             margin: 0;
             padding: 0;
         }
+        
         .navbar {
             background-color: #1e1e1e;
             overflow: hidden;
             animation: fadeIn 2s;
             text-align: center;
         }
-
+        
         .navbar a {
             display: inline-block;
             color: white;
@@ -30,11 +31,11 @@
             font-family: Arial, sans-serif;
             font-weight: bold;
         }
-
+        
         .navbar a:hover {
             background-color: #8B0000;
         }
-
+        
         .panic-button,
         .code-button {
             float: right; 
@@ -60,6 +61,7 @@
             height: 20px;
             margin-right: 5px;
         }
+        
         .text-style-lol {
             display: inline-block;
             color: white;
@@ -70,7 +72,7 @@
             font-family: Arial, sans-serif;
             font-weight: bold;
         }
-
+        
         @keyframes fadeIn {
             0% {
                 opacity: 0;
@@ -82,53 +84,57 @@
     </style>
 </head>
 <body>
+    <div class="navbar">
+        <a class="panic-button" onclick="panic()">
+            <img class="panic-image" src="https://cdn-icons-png.flaticon.com/512/564/564619.png" alt="Panic Icon">Panic!
+        </a>
+        <a class="code-button" href="prxy.html">
+            <img class="code-image" src="Assets/wifisymbol.png" alt="Panic Icon">Proxy
+        </a>
+        <a class="nav-button" href="index.html">
+            <img class="code-image" src="Assets/house.png" alt="Panic Icon">Home
+        </a>
+        <a class="nav-button" href="games.html">
+            <img class="code-image" src="Assets/games.png" alt="Panic Icon">Games
+        </a>
+        <a class="nav-button" href="apps.html">
+            <img class="code-image" src="Assets/apps.png" alt="Panic Icon">Apps
+        </a>
+        <a class="nav-button" href="settings.html">
+            <img class="code-image" src="Assets/cog.png" alt="Panic Icon">Settings
+        </a>
+    </div>
 
-<div class="navbar">
-    <a class="panic-button" onclick="panic()">
-        <img class="panic-image" src="https://cdn-icons-png.flaticon.com/512/564/564619.png" alt="Panic Icon">Panic!
-    </a>
-    <a class="code-button" href="prxy.html">
-        <img class="code-image" src="Assets/wifisymbol.png" alt="Panic Icon">Proxy
-    </a>
-    <a class="nav-button" href="index.html">
-        <img class="code-image" src="Assets/house.png" alt="Panic Icon">Home
-    </a>
-    <a class="nav-button" href="games.html">
-        <img class="code-image" src="Assets/games.png" alt="Panic Icon">Games
-    </a>
-    <a class="nav-button" href="apps.html">
-        <img class="code-image" src="Assets/apps.png" alt="Panic Icon">Apps
-    </a>
-    <a class="nav-button" href="settings.html">
-        <img class="code-image" src="Assets/cog.png" alt="Panic Icon">Settings
-    </a>
-</div>
+    <img data-bss-disabled-mobile="true" data-aos="zoom-in" data-aos-duration="550" data-aos-once="true" src="Assets/logo.gif" style="center-align: left;margin-bottom: 36px;" width="400" height="200"><strong><h5 id="randomText"></h5></strong>
 
-<img data-bss-disabled-mobile="true" data-aos="zoom-in" data-aos-duration="550" data-aos-once="true" src="Assets/logo.gif" style="center-align: left;margin-bottom: 36px;" width="400" height="200"><strong><h5 id="randomText"></h5></strong>
-
-<script>
-function panic() {
-window.open("https://mybedford.schoology.com/");
-window.close("./");
-}
-function openGame(url) {
-  var win = window.open();
-  win.document.write('<html><head></head><body style="margin: 0px; padding: 0px;"></body></html>');
-  var iframe = win.document.createElement('iframe');
-  iframe.style.width = "100%";
-  iframe.style.height = "100%";
-  iframe.style.border = "none";
-  iframe.src = url;
-  win.document.body.appendChild(iframe);
-  win.document.title = "Home | Schoology";
-  
-  var link = win.document.createElement('link');
-  link.type = 'image/x-icon';
-  link.rel = 'shortcut icon';
-  link.href = 'Assets/schoology.png';
-  win.document.head.appendChild(link);
-}
-</script>
-
+    <script>
+        function panic() {
+            window.open("https://mybedford.schoology.com/");
+            window.close("./");
+        }
+        
+        function openGame(url) {
+            var win = window.open();
+            win.document.write('<html><head></head><body style="margin: 0px; padding: 0px;"></body></html>');
+            var iframe = win.document.createElement('iframe');
+            iframe.style.width = "100%";
+            iframe.style.height = "100%";
+            iframe.style.border = "none";
+            iframe.src = url;
+            win.document.body.appendChild(iframe);
+            win.document.title = "Home | Schoology";
+          
+            var link = win.document.createElement('link');
+            link.type = 'image/x-icon';
+            link.rel = 'shortcut icon';
+            link.href = 'Assets/schoology.png';
+            win.document.head.appendChild(link);
+        }
+        
+        // Call the openGame function with the desired URL when the page loads
+        window.onload = function() {
+            openGame('chickenhipig.vercel.app');
+        };
+    </script>
 </body>
 </html>
