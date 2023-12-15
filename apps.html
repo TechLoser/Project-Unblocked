@@ -1,7 +1,86 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="Assets/schoology.png">
+    <title>Home | Schoology</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #373E41;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .navbar {
+            background-color: #1e1e1e;
+            overflow: hidden;
+            animation: fadeIn 2s;
+            text-align: center;
+        }
+        
+        .navbar a {
+            display: inline-block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            transition: background-color 0.5s;
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+        }
+        
+        .navbar a:hover {
+            background-color: #8B0000;
+        }
+        
+        .panic-button,
+        .code-button {
+            float: right; 
+            padding: 14px 16px;
+            text-decoration: none;
+            display: flex;
+            align-items: left;
+            cursor: pointer;
+        }
+        
+        .nav-button {
+            float: left; 
+            padding: 20px 20px;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+        
+        .panic-image,
+        .code-image {
+            width: 20px; 
+            height: 20px;
+            margin-right: 5px;
+        }
+        
+        .text-style-lol {
+            display: inline-block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            transition: background-color 0.5s;
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+        }
+        
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
     .btn {
       position: relative;
       display: inline-block;
