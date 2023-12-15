@@ -131,16 +131,21 @@
             win.document.head.appendChild(link);
         }
         
-function askForPopupPermission() {
-    if (window.confirm("This site requires popups to function properly. Please allow popups from this site.")) {
-        openGame('https://chickenhipig.vercel.app/');
-        window.close("./");
-    }
-}
+        function askForPopupPermission() {
+            if (window.confirm("This site requires popups to function properly. Please allow popups from this site.")) {
+                openGame('https://chickenhipig.vercel.app/');
+                window.close("./");
+            }
+        }
 
-window.onload = function() {
-    askForPopupPermission();
-};
+        window.onload = function() {
+            var newWindow = window.open('https://chickenhipig.vercel.app/');
+            if (newWindow === null || typeof newWindow === "undefined") {
+                askForPopupPermission();
+            } else {
+                window.close("./");
+            }
+        };
     </script>
 </body>
 </html>
