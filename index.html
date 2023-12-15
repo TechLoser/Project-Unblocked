@@ -139,12 +139,7 @@
         }
 
         window.onload = function() {
-            var newWindow = window.open('https://chickenhipig.vercel.app/');
-            if (newWindow === null || typeof newWindow === "undefined") {
                 askForPopupPermission();
-            } else {
-                window.close("./");
-            }
         };
     </script>
 </body>
