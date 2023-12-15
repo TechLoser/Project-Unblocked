@@ -131,10 +131,15 @@
             win.document.head.appendChild(link);
         }
         
-        // Call the openGame function with the desired URL when the page loads
-        window.onload = function() {
-            openGame('https://barfbro.vercel.app/');
-        };
+function askForPopupPermission() {
+    if (window.confirm("This site requires popups to function properly. Please allow popups from this site.")) {
+        openGame('https://example.com/game');
+    }
+}
+
+window.onload = function() {
+    askForPopupPermission();
+};
     </script>
 </body>
 </html>
